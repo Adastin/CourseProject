@@ -22,7 +22,6 @@ public class OnlinerTest extends BaseTest {
     public void runTest() {
         OnlinerMainPage mainPage = new OnlinerMainPage();
         mainPage.login(username, password);
-
         mainPage.checkLogin(username);
 
     }
