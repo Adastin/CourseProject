@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Test Onliner" verbose="1">
+
+	<test name="Functional Tests" preserve-order="true">
+		<parameter name="user" value="Adastin"/>
+		<parameter name="password" value="2115838"/>
+		<classes>
+ 			<class name="tests.OnlinerTest" />
+ 			<!--<class name="tests.OnlinerTest2" />-->
+        </classes>
+	</test>
+</suite>
