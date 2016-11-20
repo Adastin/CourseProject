@@ -5,12 +5,14 @@ import webdriver.BaseForm;
 import webdriver.elements.Label;
 import webdriver.elements.TextBox;
 
-public class PageOfGoods extends BaseForm {
+public class PageOfGoods extends OnlinerBy {
     private Label company = new Label(By.xpath("//span[text()=\"Samsung\"]"), "Samsung");
     private TextBox price = new TextBox(By.xpath("//input[@placeholder=\"до\"]"), "price");
     private TextBox sizeMin = new TextBox(By.xpath("//div/div[1]/select"), "min size");
     private TextBox sizeMax = new TextBox(By.xpath("//div/div[2]/select"), "max size");
     private TextBox date = new TextBox(By.xpath("//input[@placeholder='2010']"), "min date");
+    private Label product = new Label(By.xpath("//span[@data-bind='html: product.full_name']"));
+
     public PageOfGoods() {
         super(By.xpath("//h1"), "TV sets");
     }
@@ -22,6 +24,10 @@ public class PageOfGoods extends BaseForm {
         sizeMax.click();
         sizeMax.type(maxSize);
         date.type(minDate);
+    }
+
+    public void chooseProduct(){
+        product.click();
     }
 
 }

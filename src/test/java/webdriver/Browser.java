@@ -233,6 +233,7 @@ public final class Browser {
 	 * Navgates to the previous page
 	 */
 	public void back() {
+		Logger.getInstance().info("Navigating back");
 		driver.navigate().back();
 	}
 

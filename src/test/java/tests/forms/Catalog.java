@@ -2,10 +2,10 @@ package tests.forms;
 
 import org.openqa.selenium.By;
 import webdriver.BaseForm;
-import webdriver.elements.Button;
+import webdriver.elements.CheckBox;
 
-public class Catalog extends BaseForm {
-    private Button tvSet = new Button(By.linkText("Телевизоры"), "TV sets");
+public class Catalog extends OnlinerBy {
+    private CheckBox tvSet = new CheckBox(By.linkText("Телевизоры"), "TV sets");
     public Catalog() {
         super(By.xpath("//img['onliner_logo retina-off']"), "Catalog");
     }

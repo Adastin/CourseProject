@@ -5,8 +5,10 @@
 		<parameter name="user" value="Adastin"/>
 		<parameter name="password" value="2115838"/>
 		<classes>
- 			<class name="tests.OnlinerTest" />
+ 			<!--<class name="tests.OnlinerTest" />-->
  			<!--<class name="tests.OnlinerTest2" />-->
+ 			<!--<class name="tests.OnlinerTest3" />-->
+ 			<class name="tests.OnlinerTest4" />
         </classes>
 	</test>
 </suite>

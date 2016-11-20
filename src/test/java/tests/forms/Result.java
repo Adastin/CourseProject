@@ -8,7 +8,7 @@ import webdriver.elements.Label;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Result extends BaseForm {
+public class Result extends OnlinerBy {
     private By locator = By.xpath("//span[@data-bind='html: product.full_name']");
     List<WebElement> list;
     ArrayList<String> stringList = new ArrayList<String>();

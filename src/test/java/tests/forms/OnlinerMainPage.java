@@ -3,27 +3,28 @@ package tests.forms;
 import org.openqa.selenium.By;
 import webdriver.BaseForm;
 import webdriver.elements.Button;
+import webdriver.elements.CheckBox;
 import webdriver.elements.Label;
 
-public class OnlinerMainPage extends BaseForm {
-    private Label catalog = new Label(By.linkText("Каталог"), "Catalog");
-    private Button login = new Button(By.xpath("//div[@class='auth-bar__item auth-bar__item--text']"), "login");
-    private Label user = new Label(By.xpath("//p[@class='user-name']"), "User");
+public class OnlinerMainPage extends OnlinerBy {
+
+
+    private Label news = new Label(By.xpath("//span[@class=\"text-i\"]"));
+
     public OnlinerMainPage() {
         super(By.xpath("//img['onliner_logo retina-off']"), "Onliner.by");
     }
-    public void goToCatalog(){
-        catalog.click();
+
+    public void checkNews(){
+        String s = news.getText();
+        System.out.println(s);
+        news.click();
+        browser.waitForPageToLoad();
+        String s1 = browser.getDriver().findElement(By.xpath("//div[@class='news-header__title']")).getText();
+        System.out.println(s1);
+        System.out.println(s1.contains(s));
     }
 
-    public void login(String username, String password){
-        login.click();
-        LoginPage loginPage = new LoginPage();
-        loginPage.login(username, password);
-    }
 
-    public void checkLogin(String username){
-        assertEquals(user.getText(), username);
-}
 
 }

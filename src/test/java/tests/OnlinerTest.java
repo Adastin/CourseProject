@@ -21,7 +21,7 @@ public class OnlinerTest extends BaseTest {
     @Override
     public void runTest() {
         OnlinerMainPage mainPage = new OnlinerMainPage();
-        mainPage.login(username, password);
+        mainPage.sigIn(username, password);
         mainPage.checkLogin(username);
 
     }
